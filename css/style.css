@@ -1,8 +1,551 @@
-body{
-    background: #000;
-    color: #fff;
+/* CSS Document */
+
+/* 
+Created on   : 06/01/2022.
+Template Name   : Bayazid Portfolio Based on Mission 2022 Figma Templae
+Version      : 1.0.
+Developed by : webdeveloperbayazid@gmail.com
+Primary use:  Assignment Purpose */
+
+/* base css */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
-ul li{
-    font-size: 15px;
-    margin-bottom: 10px;
+
+html {
+  font-family: "Poppins", sans-serif;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+  height: 100%;
+  scroll-behavior: smooth;
+}
+body {
+  background: #fff;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 30px;
+  font-family: "Poppins", sans-serif;
+  color: #3e3e3e;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+a {
+  text-decoration: none;
+}
+a,
+button,
+.btn {
+  transition: 0.3s ease-in-out;
+}
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+/* typography */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  color: #333;
+}
+h1 {
+  font-family: "Yeseva One", cursive;
+  font-size: 60px;
+  line-height: 80px;
+}
+h2 {
+  font-size: 48px;
+  line-height: 70px;
+  font-weight: 700;
+}
+h3 {
+  font-size: 24px;
+  line-height: 32px;
+}
+h5 {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
+}
+p {
+  font-size: 18px;
+  margin-top: 0;
+  margin-bottom: 18px;
+}
+p a {
+  color: #3e3e3e;
+}
+p a:hover,
+a:hover {
+  color: #ff5959;
+}
+/* spacing helper clss */
+.mb-1 {
+  margin-bottom: 5px;
+}
+.mb-2 {
+  margin-bottom: 10px;
+}
+.mb-3 {
+  margin-bottom: 15px;
+}
+.mb-4 {
+  margin-bottom: 20px;
+}
+.mb-5 {
+  margin-bottom: 25px;
+}
+.mb-6 {
+  margin-bottom: 30px;
+}
+.mb-7 {
+  margin-bottom: 35px;
+}
+.mb-8 {
+  margin-bottom: 40px;
+}
+.mb-9 {
+  margin-bottom: 45px;
+}
+.mb-48 {
+  margin-bottom: 48px;
+}
+img {
+  max-width: 100%;
+}
+.text-center {
+  text-align: center;
+}
+input,
+textarea {
+  width: 100%;
+  padding: 15px;
+  height: 45px;
+  background: #efefef;
+  border: none;
+  border-radius: 6px;
+  border: 2px solid transparent;
+  font-family: "Poppins", sans-serif;
+  transition: 0.3s ease-in-out;
+  font-size: 15px;
+}
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: #ffad5a;
+}
+textarea {
+  min-height: 180px;
+}
+.input-group {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+/* helper class */
+.container {
+  max-width: 1130px;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+.row-25 {
+  margin-left: -25px;
+  margin-right: -25px;
+}
+.row-25 > [class*="col-"] {
+  padding-left: 25px;
+  padding-right: 25px;
+}
+.row-36 {
+  margin-left: -36px;
+  margin-right: -36px;
+}
+.row-36 > [class*="col-"] {
+  padding-left: 36px;
+  padding-right: 36px;
+}
+.row-53 {
+  margin-left: -53px;
+  margin-right: -53px;
+}
+.row-53 > [class*="col-"] {
+  padding-left: 53px;
+  padding-right: 53px;
+}
+.align-center {
+  align-items: center;
+}
+.flex-center {
+  display: flex;
+  align-items: center;
+}
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
+  border: 0;
+}
+.col-1,
+.col-2,
+.col-3,
+.col-4,
+.col-5,
+.col-6,
+.col-7,
+.col-8,
+.col-9,
+.col-10,
+.col-11,
+.col-12 {
+  position: relative;
+  width: 100%;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.col-1 {
+  flex: 0 0 8.333333%;
+  max-width: 8.333333%;
+}
+
+.col-2 {
+  flex: 0 0 16.666667%;
+  max-width: 16.666667%;
+}
+
+.col-3 {
+  flex: 0 0 25%;
+  max-width: 25%;
+}
+
+.col-4 {
+  flex: 0 0 33.333333%;
+  max-width: 33.333333%;
+}
+
+.col-5 {
+  flex: 0 0 41.666667%;
+  max-width: 41.666667%;
+}
+
+.col-6 {
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+
+.col-7 {
+  flex: 0 0 58.333333%;
+  max-width: 58.333333%;
+}
+
+.col-8 {
+  flex: 0 0 66.666667%;
+  max-width: 66.666667%;
+}
+
+.col-9 {
+  flex: 0 0 75%;
+  max-width: 75%;
+}
+
+.col-10 {
+  flex: 0 0 83.333333%;
+  max-width: 83.333333%;
+}
+
+.col-11 {
+  flex: 0 0 91.666667%;
+  max-width: 91.666667%;
+}
+
+.col-12 {
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+
+.position-relative {
+  position: relative;
+}
+.color-primary {
+  color: #ffad5a;
+}
+.bg-1 {
+  background: rgba(79, 157, 166, 0.1);
+}
+.bg-2 {
+  background: rgba(255, 89, 89, 0.1);
+}
+.bg-3 {
+  background: #fff4d6;
+}
+.btn {
+  display: inline-flex;
+  align-items: center;
+  background: #ff5959;
+  border: 2px solid #ff5959;
+  font-size: 16px;
+  padding: 11px 36px;
+  height: 48px;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+}
+.btn:focus {
+  outline: none;
+}
+.btn:hover {
+  background: transparent;
+  color: #ff5959;
+}
+.title-2 {
+  font-size: 36px;
+  line-height: 54px;
+  margin-bottom: 17px;
+}
+.d-block {
+  display: block;
+}
+.m-auto {
+  margin: auto;
+}
+/* hero section css */
+.hero-section-wrapper {
+  display: flex;
+  align-items: center;
+  padding-top: 60px;
+}
+.hero-content p {
+  line-height: 28px;
+  padding-right: 20%;
+}
+.hero-content h1 {
+  padding-left: 13px;
+  position: relative;
+}
+.hero-content h1::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  top: 20px;
+  width: 4px;
+  height: 124px;
+  background: #ff5959;
+}
+
+/* mission section css */
+.my-mission {
+  padding-top: 60px;
+}
+.single-mission-block {
+  padding: 25px 32px;
+  border-radius: 26px;
+  transition: 0.3s;
+}
+.single-mission-block:hover {
+  transform: translateY(-5px);
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 20px -20px;
+}
+.single-mission-block .thumb {
+  display: flex;
+  width: 141px;
+  height: 141px;
+  margin-bottom: 12px;
+}
+
+.single-mission-block p {
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 0;
+}
+/* develop without limits section css */
+
+.develop-without-limits-section {
+  padding-top: 55px;
+  padding-bottom: 25px;
+  position: relative;
+}
+.shape {
+  position: absolute;
+}
+.rounded-shape {
+  top: 0;
+  z-index: -1;
+  width: 227px;
+  height: 227px;
+  left: 0;
+}
+.develop-without-limits-section .dot-shape-image {
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+}
+.develop-without-limits-section .dot-shape-image.right {
+  bottom: auto;
+  top: -10%;
+  left: auto;
+  right: 0;
+}
+
+.develop-without-limits-section .rounded-shape {
+  top: 64px;
+  z-index: -1;
+  width: 227px;
+  height: 227px;
+  left: -94px;
+}
+
+/* global communit section css */
+.global-community-section {
+  position: relative;
+}
+.global-community-section .rounded-shape {
+  left: auto;
+  top: auto;
+  right: -94px;
+  bottom: -64px;
+}
+
+/* footer section css */
+footer {
+  background: #0b0d17;
+  padding: 40px 15px;
+}
+footer .logo {
+  margin-bottom: 24px;
+}
+footer p {
+  color: #fff;
+  font-size: 14px;
+  color: #d9dbe1;
+  margin: 0;
+}
+/* contact section css */
+
+.contact {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.address .description {
+  font-size: 17px;
+  line-height: 26px;
+}
+.address-list li {
+  display: flex;
+}
+.address-list li small {
+  display: inline-block;
+  font-weight: 600;
+  text-transform: capitalize;
+  line-height: 1;
+}
+.address-list li p {
+  font-size: 15px;
+  line-height: 24px;
+  color: #666;
+}
+.address-list li .icon {
+  width: 50px;
+  height: 50px;
+  background: #ffad5a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+.address-list li .icon img {
+  width: 26px;
+  filter: invert(1);
+}
+
+/* some basic mobile responsive */
+@media only screen and (max-width: 991px) {
+  .hero-section-wrapper [class*="col-"],
+  .contact [class*="col-"],
+  .global-community-section [class*="col-"],
+  .develop-without-limits-section [class*="col-"] {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .hero-avatar {
+    width: 350px;
+    height: 350px;
+    margin-bottom: 50px;
+  }
+  .hero-section-wrapper .col-7 {
+    order: 2;
+  }
+  .my-mission .col-4 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+  .shape {
+    display: none;
+  }
+}
+@media only screen and (max-width: 575px) {
+  .col-1,
+  .col-2,
+  .col-3,
+  .col-4,
+  .col-5,
+  .col-6,
+  .col-7,
+  .col-8,
+  .col-9,
+  .col-10,
+  .col-11,
+  .col-12 {
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+  }
+  br {
+    display: none;
+  }
+  h1 {
+    font-size: 35px;
+    line-height: 58px;
+  }
+  .hero-content h1::before {
+    height: 80px;
+  }
+  h2 {
+    font-size: 30px;
+    line-height: 50px;
+  }
+  .title-2 {
+    font-size: 30px;
+    line-height: 45px;
+  }
+  .hero-avatar {
+    width: 320px;
+    height: 320px;
+  }
 }
